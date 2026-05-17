@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Informasi Akademik Praktikan{% endblock %}
+{% block content %}
+<div class="container py-5 mt-4">
+    <div class="card p-5 shadow-sm border-0 rounded-4 max-width-container mx-auto text-center" data-aos="zoom-in">
+        <div class="profile-avatar bg-primary text-white rounded-circle mx-auto d-flex align-items-center justify-content-center mb-4 shadow">
+            <i class="fa-solid fa-user-gradient display-5 m-0"><i class="fa-solid fa-graduation-cap"></i></i>
+        </div>
+        <span class="badge bg-secondary-subtle text-secondary px-3 py-2 rounded-pill text-xs fw-bold mb-2 text-uppercase">Lembar Verifikasi Praktikan</span>
+        <h2 class="fw-extrabold text-body-emphasis mb-1">Ari Mauludin</h2>
+        <p class="text-primary font-mono fw-bold text-sm mb-4">Program Studi Teknik Informatika</p>
+        
+        <div class="row text-start g-3 max-width-text mx-auto border-top pt-4">
+            <div class="col-sm-6">
+                <small class="text-muted uppercase text-xs font-semibold block">Mata Kuliah</small>
+                <span class="text-body-emphasis fw-bold text-sm">Praktikum Kecerdasan Buatan</span>
+            </div>
+            <div class="col-sm-6">
+                <small class="text-muted uppercase text-xs font-semibold block">Semester / Tahun Akademik</small>
+                <span class="text-body-emphasis fw-bold text-sm">Semester Genap 2024/2025</span>
+            </div>
+            <div class="col-sm-6 mt-3">
+                <small class="text-muted uppercase text-xs font-semibold block">Jenis Tugas Evaluasi</small>
+                <span class="text-body-emphasis fw-bold text-sm">Ujian Tengah Semester (UTS)</span>
+            </div>
+            <div class="col-sm-6 mt-3">
+                <small class="text-muted uppercase text-xs font-semibold block">Status Otentikasi</small>
+                <span class="text-success fw-bold text-sm"><i class="fa-solid fa-shield-halved me-1"></i>Terverifikasi 100% Mandiri</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

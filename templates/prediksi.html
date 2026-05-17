@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block title %}Kalkulator Prediksi Harga Rumah{% endblock %}
+{% block content %}
+
+<div class="container py-5" style="margin-top: 100px; min-height: 80vh;">
+    <div class="row justify-content-center">
+        <div class="col-lg-7" data-aos="zoom-in">
+            <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
+                <div class="card-header bg-dark text-white text-center py-4 border-0">
+                    <h3 class="fw-bold mb-1"><i class="fa-solid fa-calculator me-2 text-primary"></i>Kalkulator Prediksi Harga</h3>
+                    <p class="text-white-50 mb-0 small">Masukkan spesifikasi rumah untuk menghitung estimasi harga pasar</p>
+                </div>
+                <div class="card-body p-4 p-md-5 bg-card">
+                    <form action="/prediksi" method="POST">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Luas Tanah (m²)</label>
+                                <input type="number" class="form-control py-2" name="luas_tanah" placeholder="Contoh: 120" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Luas Bangunan (m²)</label>
+                                <input type="number" class="form-control py-2" name="luas_bangunan" placeholder="Contoh: 90" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Jumlah Kamar Tidur</label>
+                                <input type="number" class="form-control py-2" name="kamar_tidur" placeholder="Contoh: 3" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Jumlah Kamar Mandi</label>
+                                <input type="number" class="form-control py-2" name="kamar_mandi" placeholder="Contoh: 2" required>
+                            </div>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold py-2.5">Mulai Hitung Valuasi</button>
+                            <a href="/" class="btn btn-link text-muted mt-2 d-block text-decoration-none">← Kembali ke Dashboard Utama</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            {% if hasil_prediksi %}
+            <div class="card border-0 shadow-sm rounded-4 text-center p-4 bg-dark text-white mb-5" data-aos="fade-up">
+                <h5 class="fw-bold text-white-50 mb-2">Hasil Estimasi Valuasi Rumah:</h5>
+                <h1 class="display-5 fw-extrabold text-success m-0">Rp {{ hasil_prediksi }} Juta</h1>
+                <p class="text-muted small mt-2 mb-0">Dihitung otomatis menggunakan akurasi model Random Forest Regressor Terbaik.</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment (Sangat wajib di-ignore)
+.venv/
+.venv-1/
+venv/
+ENV/
+env/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Databases & local logs
+*.db
+*.sqlite3
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+# Database lokal
+predictions.db

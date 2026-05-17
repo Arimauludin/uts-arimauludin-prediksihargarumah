@@ -1,0 +1,91 @@
+/* static/css/style.css */
+:root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --hero-bg: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+}
+
+body {
+    font-family: var(--font-sans);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Glassmorphism Blur Efek Pada Header Navbar */
+.navbar-blur {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+}
+
+[data-bs-theme="dark"] .navbar-blur {
+    background-color: rgba(30, 41, 59, 0.8) !important;
+}
+
+.main-content-wrapper {
+    margin-top: 76px;
+    flex-grow: 1;
+}
+
+.hero-section {
+    background: var(--hero-bg);
+    min-height: 480px;
+}
+
+.relative-z { z-index: 10; }
+.font-tracking { tracking: 0.05em; }
+.line-height-0 { line-height: 0; }
+.max-width-container { max-width: 1050px; }
+.max-width-text { max-width: 500px; }
+.text-xs { font-size: 0.75rem; }
+.text-sm { font-size: 0.875rem; }
+.block { display: block; }
+.font-mono { font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace !important; }
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+}
+
+/* CSS UI Loading Indicator State Overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(15, 23, 42, 0.85);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+}
+
+.border-dashed {
+    border: 2px dashed rgba(0,0,0,0.15) !important;
+}
+[data-bs-theme="dark"] .border-dashed {
+    border: 2px dashed rgba(255,255,255,0.15) !important;
+}
+
+/* Animations Interaction */
+.custom-card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.custom-card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1) !important;
+}
+
+.custom-hero-img {
+    max-height: 340px;
+    object-cover: cover;
+}

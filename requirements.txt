@@ -1,0 +1,6 @@
+flask
+gradio
+scikit-learn
+pandas
+numpy
+gunicorn
