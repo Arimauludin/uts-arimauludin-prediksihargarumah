@@ -1,8 +1,8 @@
-Flask==2.3.2
-scikit-learn
-tensorflow
+gunicorn
+flask
 pandas
 numpy
-joblib
-gunicorn
 matplotlib
+seaborn
+scikit-learn
+tensorflow
