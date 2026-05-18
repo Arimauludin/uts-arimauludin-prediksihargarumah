@@ -3,4 +3,4 @@ gradio
 scikit-learn
 pandas
 numpy
-gunicorn app:app
+gunicorn 
